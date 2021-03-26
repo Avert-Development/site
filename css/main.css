@@ -1,0 +1,68 @@
+body {
+    margin: auto;
+    font-family: arial;
+    background: #f3f3f3;
+}
+
+img {
+    height: 150px;
+
+}
+
+@keyframes load {
+    0%{transform: scale(1); left: 50%; margin-left: -75px;}
+    25%{transform: scale(1.2);}
+    50%{transform: scale(1);}
+    75%{transform: scale(1.2); left: 50%; margin-left: -75px;}
+    100%{transform: scale(0.7); left:50%;}
+}
+
+#logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 40;
+    margin-top: -75px;
+    margin-left: -210px;
+    animation-name: load;
+    animation-duration: 3s;
+    transform: scale(0.7);
+}
+
+
+
+p {
+    font-size: 40px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top:50%;
+    margin-top: -23px;
+    margin-left: -65px;
+    animation-name: entry;
+    animation-duration: 3s;
+}
+
+@keyframes entry {
+    0%{left: 0px;}
+    75%{left: 0px;}
+    100%{ left: 50%;}
+}
+
+.cover {
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    width: 300px;
+    background-color: #f3f3f3;
+    animation-name: reveal;
+    animation-duration: 3s;
+    z-index: 30;
+}
+
+@keyframes reveal {
+    0%{width: 50%px;}
+    75%{width: 50%;}
+    100%{width: 40%;}
+}
+
